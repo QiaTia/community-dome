@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ZH_CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Cache" content="no-cache" />
+    <title>%VITE_APP_NAME%</title>
+    <style>
+      @keyframes loading-rotate {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes loading-dash {
+        0% {
+          stroke-dasharray: 1, 200;
+          stroke-dashoffset: 0;
+        }
+
+        50% {
+          stroke-dasharray: 90, 150;
+          stroke-dashoffset: -40px;
+        }
+
+        to {
+          stroke-dasharray: 90, 150;
+          stroke-dashoffset: -120px;
+        }
+      }
+      .chagee__seat {
+        position: fixed;
+        cursor: none;
+        width: 100vw;
+        z-index: -1;
+        height: 100vh;
+        flex-direction: column;
+        pointer-events: none;
+      }
+      .chagee__seat img {
+        background-color: white;
+        border-radius: 50%;
+      }
+      .chagee__seat p {
+        margin-top: 1.6em;
+        margin-bottom: 0.4em;
+      }
+      .flex-algin {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .circular {
+        display: inline;
+        height: 2em;
+        width: 2em;
+        animation: loading-rotate 2s linear infinite;
+      }
+      .circular .path {
+        animation: loading-dash 1.5s ease-in-out infinite;
+        stroke-dasharray: 90, 150;
+        stroke-dashoffset: 0;
+        stroke-width: 2;
+        stroke: #50d5b7;
+        stroke-linecap: round;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="chagee__seat flex-algin">
+      <p>%VITE_APP_NAME%</p>
+      <svg class="circular" viewBox="0 0 50 50"><circle class="path" cx="25" cy="25" r="20" fill="none"></circle></svg>
+    </div>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
