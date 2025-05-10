@@ -31,11 +31,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@main
-      # 使用 node:16
+      # 使用 node:20
       - name: use Node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: '16.x'
+          node-version: '20'
       # npm install & build
       - name: npm install and build
         run: |
