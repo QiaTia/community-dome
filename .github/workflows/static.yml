@@ -33,9 +33,9 @@ jobs:
         uses: actions/checkout@main
       # 使用 node:16
       - name: use Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v3
         with:
-          node-version: '18.x'
+          node-version: '16.x'
       # npm install & build
       - name: npm install and build
         run: |
