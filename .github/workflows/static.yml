@@ -35,16 +35,14 @@ jobs:
       - name: use Node
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: 'lts'
       # npm install & build
       - name: Install pnpm
         run: npm install -g pnpm
       - name: Install dependencies
         run: pnpm install --frozen-lockfile # 使用 pnpm 安装依赖，并使用 lock 文件来确保一致性
       - name: vite build
-        run: |
-          npm install
-          npx vite build
+        run: npx vite build
         env:
           CI: true
       - name: Setup Pages
