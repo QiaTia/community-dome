@@ -1,11 +1,11 @@
 import type { RouteRecordRaw } from 'vue-router';
-import WhiteLayout from '@/App.vue';
+// import WhiteLayout from '@/App.vue';
 
 const routes: RouteRecordRaw[] = [
   {
     path: '/',
     redirect: '/home',
-    component: () => WhiteLayout,
+    component: () => import('@/App.vue'),
     children: [
       {
         path: '/home',

@@ -10,6 +10,9 @@ import viteCompression from 'vite-plugin-compression';
 export default function ({ mode }) {
   const env = loadEnv(mode, process.cwd());
   return defineConfig({
+    build: {
+      sourcemap: true,
+    },
     plugins: [
       vue(),
       Components({ resolvers: [VantResolver()] }),
