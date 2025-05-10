@@ -7,12 +7,10 @@ import { queryParse } from '@/servers/request/utils';
 import { useUserStore } from '@/store/';
 import { setRefToken, getRefToken, setToken } from '@/config/env';
 // import update from './update';
-import V3Waterfall from 'v3-waterfall';
-import 'v3-waterfall/dist/style.css';
 
 export default {
   install(app: App<Element>, _options = {}) {
-    app.use(createPinia()).use(Icon).use(router).use(Overlay).use(List).use(V3Waterfall);
+    app.use(createPinia()).use(Icon).use(router).use(Overlay).use(List);
   },
 };
 

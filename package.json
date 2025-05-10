@@ -18,7 +18,6 @@
     "axios": "^1.2.6",
     "normalize.css": "^8.0.1",
     "pinia": "^2.1.7",
-    "v3-waterfall": "^2.0.1",
     "vant": "^4.0.10",
     "vue": "^3.4.21",
     "vue-router": "^4.3.0"
